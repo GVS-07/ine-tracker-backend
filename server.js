@@ -19,7 +19,7 @@ async function scrapeProductData(url) {
         
         if (!url.startsWith("http")) url = "https://" + url;
 
-        browser = await chromium.launch({ headless: false });
+        browser = await chromium.launch({ headless: true });
         const context = await browser.newContext({
             userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             viewport: { width: 1280, height: 720 }
